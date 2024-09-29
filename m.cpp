@@ -1,18 +1,32 @@
+/// Gfaerny
+/// With GCC and focus editor
+/// NO LIC
+
     #include <iostream>
     #include <vector>
     #include <algorithm>
     #include <string>
+    #ifdef __linux__
+    #include <cstdlib>
+    #else
     #include <windows.h>
+    #endif
 
+/// Clear The CLI for Windows
     void cls()
 {
+    #ifdef __linux__
+    system("clear");
+    #else
     system("cls");
+    #endif
 }
 
+/// Print The TASK LIST
     void st(std::vector<std::string>& task)
 {
-    for (int i = 0; i < vec.size(); i++) {
-        std::cout << i + 1 << " ."<< vec[i] << std::endl;
+    for (int i = 0; i < task.size(); i++) {
+        std::cout << i + 1 << " ."<< task[i] << std::endl;
     }
 }
 
@@ -26,7 +40,7 @@
     std::cout << "ENTER COMMAND : " ;
     std::string COMMAND;
     std::cin >> COMMAND ;
-    
+
     if ( COMMAND == "ADD" ) {
     std::string TASKNAME;
     std::cout << " WHAT NAME IS THE TASK YOU WANT TO ADD : ";
@@ -37,15 +51,15 @@
     int tasknum;
     std::cout << "WHAT TASK NUMBER YOU WANT TO REMOVE : " ;
     std::cin >> tasknum ;
-    vec.erase(vec.begin() + (tasknum - 1));
+    task.erase(task.begin() + (tasknum - 1));
     }
-    else if ( COMMAND = "EXIT" ){
+    else if ( COMMAND == "EXIT"){
     std::cout << "TM IS ABOUT TO EXIT" << std::endl;
     break;
     }
 
     cls();
-    st(vec);
+    st(task);
 
     }
     return 0;
