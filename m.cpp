@@ -1,7 +1,5 @@
-/// using getline exp cin
-
 /// Gfaerny
-/// With G++ and focus editor
+/// With GCC and focus editor
     #include <iostream>
     #include <vector>
     #include <algorithm>
@@ -39,12 +37,12 @@
     while(true){
     std::cout << "ENTER COMMAND : " ;
     std::string COMMAND;
-    std::cin >> COMMAND ;
+    std::getline(std::cin, COMMAND);
 
     if ( COMMAND == "ADD" ) {
     std::string TASKNAME;
-    std::cout << " WHAT NAME IS THE TASK YOU WANT TO ADD : ";
-    std::cin >> TASKNAME ;
+    std::cout << " WHAT NAME IS THE TASK YOU WANT TO ADD : "<< std::endl;
+    std::getline(std::cin, TASKNAME);
     task.push_back(TASKNAME);
     }
     else if ( COMMAND == "REMOVE" &&  task.size() != 0 ){
