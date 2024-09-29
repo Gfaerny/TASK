@@ -1,7 +1,7 @@
-/// Gfaerny
-/// With GCC and focus editor
-/// NO LIC
+/// using getline exp cin
 
+/// Gfaerny
+/// With G++ and focus editor
     #include <iostream>
     #include <vector>
     #include <algorithm>
