@@ -1,4 +1,5 @@
-https://github.com/user-attachments/assets/e304c338-dc39-4c2c-bbea-fb5d82cc7d3d
+(https://github.com/user-attachments/assets/e304c338-dc39-4c2c-bbea-fb5d82cc7d3d)
+
 super simple cli to do list for pers usage
 TM Have 3 command currently 
 - ADD
