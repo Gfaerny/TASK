@@ -141,7 +141,7 @@
         std::string COMMAND;
         std::getline(std::cin, COMMAND);
 
-        if ( COMMAND == "ADD" ) {
+        if ( COMMAND == "ADD" || COMMAND == "Add" ) {
         std::string TASKNAME;
         std::cout << " WHAT NAME IS THE TASK YOU WANT TO ADD : "<< std::endl;
         std::getline(std::cin, TASKNAME);
