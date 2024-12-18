@@ -47,16 +47,9 @@
             std::cerr <<"ERROR :Cant To open Last Task" << std::endl;
             std::cout << "PLEASE TRY TO RUN WITH SUDO LIKE [sudo task]" << " OR MAKE SURE YOU HAVE your  last task save file"  << std::endl;
             std::cout << "in LINUX /etc/TASK/lud.zngdm and in WINDOWS WE HAVE c/task/lud.zngdm" << std::endl;
-
-
         }
 
-
-
 }
-
-
-
 
     void saveBE(std::vector<std::string>& vec)
 {
@@ -96,7 +89,6 @@
         #endif
 
 }
-
 
 
     bool FEX()
@@ -195,13 +187,7 @@
         std::string COMMAND;
         std::getline(std::cin, COMMAND);
 
-<<<<<<< HEAD
-        if ( COMMAND == "ADD" || COMMAND == "add")
-
-        {
-=======
-        if ( COMMAND == "ADD" || COMMAND == "Add" ) {
->>>>>>> origin/main
+        if ( COMMAND == "add" || COMMAND == "ADD" ) {
         std::string TASKNAME;
         std::cout << "WHAT NAME IS THE TASK YOU WANT TO ADD : "<< std::endl;
         std::getline(std::cin, TASKNAME);
@@ -214,7 +200,16 @@
         std::cin >> tasknum ;
         task.erase(task.begin() + (tasknum - 1));
         }
-        else if ( COMMAND == "EXIT" || COMMAND == "exit"){
+
+        else if ( COMMAND == "EXIT" || COMMAND == "exit")
+        {
+
+        #ifdef __linux__
+        system("sudo rm /etc/TASK/lud.zngdm");
+        system("sudo touch /etc/TASK/lud.zngdm");
+        #else
+
+        #endif
 
         saveBE(task);
         std::cout << "TM IS ABOUT TO EXIT" << std::endl;
