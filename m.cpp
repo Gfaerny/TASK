@@ -141,7 +141,9 @@
         #ifdef __linux__
         system("mkdir /etc/TASK/ && touch /etc/TASK/lud.zngdm");
         #else
-/// make dir
+        system("md "C:\TASK\"
+        echo "" > "C:\TASK\lud.zngdm"");
+    /// make dir
         #endif
 }
 
@@ -208,7 +210,8 @@
         system("sudo rm /etc/TASK/lud.zngdm");
         system("sudo touch /etc/TASK/lud.zngdm");
         #else
-
+        system("del "C:\etc\TASK\lud.zngdm"");
+        system("echo "" > "C:\etc\TASK\lud.zngdm"")
         #endif
 
         saveBE(task);
