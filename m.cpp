@@ -1,5 +1,5 @@
 /// Gfaerny
-/// With GCC and focus editor
+/// no licence 
     #include <iostream>
     #include <vector>
     #include <algorithm>
@@ -19,7 +19,7 @@
     void loadBE(std::vector<std::string>& vec)
 {
 
-/// LOAD FIle lud.zngdm that contian the last task before app get close
+/// Load file lud.zngdm that contian last task before app get close
 
     #ifdef __linux__
         std::ifstream infile("/etc/TASK/lud.zngdm");
@@ -38,15 +38,15 @@
              // Close the file
 
              infile.close();
-             std::cout << "Succes to ADD LAST's TASK's" << std::endl;
+             std::cout << "Succes to save tasks" << std::endl;
         }
 
         else
         {
 /// THE ERROR FOR CAN'T OPEN THE SAVE FILE
-            std::cerr <<"ERROR :Cant To open Last Task" << std::endl;
-            std::cout << "PLEASE TRY TO RUN WITH SUDO LIKE [sudo task]" << " OR MAKE SURE YOU HAVE your  last task save file"  << std::endl;
-            std::cout << "in LINUX /etc/TASK/lud.zngdm and in WINDOWS WE HAVE c/task/lud.zngdm" << std::endl;
+            std::cerr <<"ERROR :Can't To open last task" << std::endl;
+            std::cout << "Please try to run app with SUDO [like sudo task]" << std::endl;
+            std::cout << "in linux platforms we have /etc/TASK/lud.zngdm file for and in WINDOWS WE HAVE c/task/lud.zngdm" << std::endl;
         }
 
 }
